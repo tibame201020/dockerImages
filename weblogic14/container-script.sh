@@ -10,7 +10,8 @@ else
   docker_weblogic14_password=$1
 fi
 
-echo -e "username=$docker_weblogic14_user\npassword=$docker_weblogic14_password" > domain.properties
+echo "username=$docker_weblogic14_user" > domain.properties
+echo "password=$docker_weblogic14_password" >> domain.properties
 
 docker pull tibame201020/weblogic14
 docker run -d --name wls14 \
