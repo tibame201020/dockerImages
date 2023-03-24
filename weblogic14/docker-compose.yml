@@ -7,7 +7,7 @@ services:
     ports:
       - "7001:7001"
     volumes:
-      - ./:/u01/oracle/properties
+      - ./domain.properties:/u01/oracle/properties/domain.properties
       - ./:/u01/oracle/user_projects
     environment:
       - ADMINISTRATION_PORT_ENABLED=false
