@@ -14,9 +14,10 @@ echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
 docker pull tibame201020/weblogic14
+
 docker run -d --name wls14 \
              -p 7001:7001 \
-             -v ./:/u01/oracle/properties \
-             -v ./:/u01/oracle/user_projects \
+             -v $(pwd)/domain.properties:/u01/oracle/properties/domain.properties \
+             -v $(pwd)/user_projects:/u01/oracle/user_projects \
              -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=base_domain \
              tibame201020/weblogic14
