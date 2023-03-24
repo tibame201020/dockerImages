@@ -12,9 +12,6 @@ fi
 
 echo -e "username=$docker_weblogic14_user\npassword=$docker_weblogic14_password" > domain.properties
 
-export docker_weblogic14_user=docker_weblogic14_user
-export docker_weblogic14_password=docker_weblogic14_password
-
 docker pull tibame201020/weblogic14
 docker run -d --name wls14 \
              -p 7001:7001 \
