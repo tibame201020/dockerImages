@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  wls14:
+    container_name: wls14
+    image: tibame201020/weblogic14
+    ports:
+      - "7001:7001"
+    volumes:
+      - ./:/u01/oracle/properties
+    environment:
+      - ADMINISTRATION_PORT_ENABLED=false
+      - DOMAIN_NAME=base_domain
+      - DOMAIN_HOME=/u01/oracle/user_projects/domains/base_domain
+      - ADMIN_PORT=9002
+      - ADMIN_USERNAME=weblogic
+      - ADMIN_PASSWORD=welcome1
+      - PRODUCTION_MODE=dev
+      - DEBUG_FLAG=true
+      - DEBUG_PORT=8453
+      - JAVA_OPTIONS=-Dweblogic.StdoutDebugEnabled=false
