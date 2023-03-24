@@ -17,10 +17,6 @@ fi
 echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
-if [ -f user_projects/domains/base_domain/servers/AdminServer/security/boot.properties ]; then
-    echo "src/file2.txt already exists, copying file1.txt and overwriting file2.txt"
-    cp -f domain.properties user_projects/domains/base_domain/servers/AdminServer/security/boot.properties
-fi
 
 docker pull tibame201020/weblogic14
 
