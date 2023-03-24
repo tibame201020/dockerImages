@@ -10,8 +10,7 @@ else
   docker_weblogic14_password=$1
 fi
 
-export docker_weblogic14_user=docker_weblogic14_user
-export docker_weblogic14_password=docker_weblogic14_password
+echo -e "username=$docker_weblogic14_user\npassword=$docker_weblogic14_password" > domain.properties
 
 docker pull tibame201020/weblogic14
 docker compose up
