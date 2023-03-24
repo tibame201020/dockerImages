@@ -10,6 +10,10 @@ else
   docker_weblogic14_password=$2
 fi
 
+if [ ! -d "user_projects" ]; then
+  mkdir user_projects
+fi
+
 echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
