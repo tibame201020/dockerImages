@@ -24,5 +24,5 @@ docker run -d --name wls14 \
              -p 7001:7001 \
              -v $(pwd)/domain.properties:/u01/oracle/properties/domain.properties \
              -v $(pwd)/user_projects:/u01/oracle/user_projects \
-             -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=base_domain \
+             -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=base_domain -e TZ=Asia/Taipei \
              tibame201020/weblogic14
