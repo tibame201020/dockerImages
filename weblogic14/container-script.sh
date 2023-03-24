@@ -7,7 +7,7 @@ fi
 if [ -z "$2" ]; then
   docker_weblogic14_password="weblogic123"
 else
-  docker_weblogic14_password=$1
+  docker_weblogic14_password=$2
 fi
 
 echo "username=$docker_weblogic14_user" > domain.properties
