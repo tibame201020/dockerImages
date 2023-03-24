@@ -10,6 +10,7 @@ services:
       - ./domain.properties:/u01/oracle/properties/domain.properties
       - ./user_projects:/u01/oracle/user_projects
     environment:
+      - TZ=Asia/Taipei
       - ADMINISTRATION_PORT_ENABLED=false
       - DOMAIN_NAME=base_domain
       - DOMAIN_HOME=/u01/oracle/user_projects/domains/base_domain
