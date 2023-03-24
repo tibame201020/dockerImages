@@ -8,6 +8,7 @@ services:
       - "7001:7001"
     volumes:
       - ./domain.properties:/u01/oracle/properties/domain.properties
+      - ./user_projects:/u01/oracle/user_projects
     environment:
       - ADMINISTRATION_PORT_ENABLED=false
       - DOMAIN_NAME=base_domain
