@@ -6,6 +6,7 @@ services:
     image: tibame201020/weblogic14
     ports:
       - "7001:7001"
+    options: --rm
     volumes:
       - ./domain.properties:/u01/oracle/properties/domain.properties
       - ./user_projects:/u01/oracle/user_projects
