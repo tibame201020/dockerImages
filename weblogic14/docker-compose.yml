@@ -4,7 +4,7 @@ services:
   wls14:
     container_name: wls14
     image: tibame201020/weblogic14
-    entrypoint: ./entrypoint.sh
+    command: sh -c "if [ ! -d /home ]; then mkdir -p /home; fi && /bin/bash"
     ports:
       - "7001:7001"
     volumes:
