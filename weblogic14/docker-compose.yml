@@ -4,7 +4,7 @@ services:
   wls14:
     container_name: wls14
     image: tibame201020/weblogic14
-    entrypoint: /entrypoint.sh
+    entrypoint: ./entrypoint.sh
     ports:
       - "7001:7001"
     volumes:
