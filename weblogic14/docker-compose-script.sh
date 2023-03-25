@@ -14,6 +14,11 @@ if [ ! -d "user_projects" ]; then
   mkdir user_projects
 fi
 
+if [ ! -d "home" ]; then
+  mkdir home
+fi
+
+
 echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
