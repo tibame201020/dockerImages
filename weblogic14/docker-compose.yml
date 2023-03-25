@@ -4,11 +4,13 @@ services:
   wls14:
     container_name: wls14
     image: tibame201020/weblogic14
+    entrypoint: /entrypoint.sh
     ports:
       - "7001:7001"
     volumes:
       - ./domain.properties:/u01/oracle/properties/domain.properties
       - ./user_projects:/u01/oracle/user_projects
+      - ./home:/home
     environment:
       - TZ=Asia/Taipei
       - ADMINISTRATION_PORT_ENABLED=false
