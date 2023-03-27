@@ -7,6 +7,7 @@ services:
     ports:
       - "7001:7001"
     volumes:
+      - ./mysql-connector-java-commercial-8.0.14.jar:/u01/oracle/oracle_common/modules/mysql-connector-java-commercial-8.0.14/mysql-connector-java-commercial-8.0.14.jar
       - ./domain.properties:/u01/oracle/properties/domain.properties
       - ./user_projects:/u01/oracle/user_projects
       - ./home:/home
