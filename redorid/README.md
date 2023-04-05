@@ -15,6 +15,7 @@ sudo apt-get update
 ```
 
 ## create kernel
+```bash
 cd ~
 wget https://github.com/microsoft/WSL2-Linux-Kernel/archive/refs/tags/linux-msft-wsl-5.10.102.1.tar.gz
 tar xf linux-msft-wsl-5.10.102.1.tar.gz
@@ -38,4 +39,4 @@ CONFIG_ANDROID_BINDERFS=y
 CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
 
 make -j`nproc`
-
+```
