@@ -21,21 +21,18 @@ tar xf linux-msft-wsl-5.10.102.1.tar.gz
 cd WSL2-Linux-Kernel-linux-msft-wsl-5.10.102.1
 cp Microsoft/config-wsl .config
 
-CONFIG_IPV6_ROUTER_PREF=y
-CONFIG_IPV6_ROUTE_INFO=y
-CONFIG_IPV6_MULTIPLE_TABLES=y
-CONFIG_IPV6_SUBTREES=y
-
-CONFIG_DMABUF_HEAPS=y
-CONFIG_DMABUF_HEAPS_SYSTEM=y
-
-CONFIG_STAGING=y
-CONFIG_ASHMEM=y
-
-CONFIG_ANDROID=y
-CONFIG_ANDROID_BINDER_IPC=y
-CONFIG_ANDROID_BINDERFS=y
-CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
+echo "CONFIG_IPV6_ROUTER_PREF=y" >> .config
+echo "CONFIG_IPV6_ROUTE_INFO=y" >> .config
+echo "CONFIG_IPV6_MULTIPLE_TABLES=y" >> .config
+echo "CONFIG_IPV6_SUBTREES=y" >> .config
+echo "CONFIG_DMABUF_HEAPS=y" >> .config
+echo "CONFIG_DMABUF_HEAPS_SYSTEM=y" >> .config
+echo "CONFIG_STAGING=y" >> .config
+echo "CONFIG_ASHMEM=y" >> .config
+echo "CONFIG_ANDROID=y" >> .config
+echo "CONFIG_ANDROID_BINDER_IPC=y" >> .config
+echo "CONFIG_ANDROID_BINDERFS=y" >> .config
+echo "CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"" >> .config
 
 make -j`nproc`
 ```
