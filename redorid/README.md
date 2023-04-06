@@ -36,3 +36,32 @@ echo "CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"" >> .config
 
 make -j`nproc`
 ```
+## copy arch/x86_64/boot/bzImage to windows dir like
+```bash
+sudo cp arch/x86_64/boot/bzImage /mnt/e/wsl/bzImage
+```
+
+## replace wsl2 kernel
+find  .wslconfig on windows
+```bash
+C:\Users\${username}\.wslconfig
+```
+modify file
+```bash
+[wsl2]
+kernel=E:\\wsl\\bzImage
+memory=4GB
+```
+## shutdown wsl
+```bash
+wsl --shutdown
+```
+## test
+```bash
+docker run -itd --rm --privileged \
+    --pull always \
+    -v ~/data11:/data \
+    -p 5555:5555 \
+    --name redroid11 \
+    redroid/redroid:11.0.0-latest
+```
