@@ -1,4 +1,4 @@
-# for logging wsl use docker run redorid
+# for logging wsl use docker run redroid
 ```bash
 sudo apt update
 sudo apt-get update
