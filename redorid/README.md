@@ -57,6 +57,7 @@ memory=4GB
 wsl --shutdown
 ```
 ## test
+run container
 ```bash
 docker run -itd --rm --privileged \
     --pull always \
@@ -64,4 +65,8 @@ docker run -itd --rm --privileged \
     -p 5555:5555 \
     --name redroid11 \
     redroid/redroid:11.0.0-latest
+```
+adb test
+```bash
+adb devices
 ```
