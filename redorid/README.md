@@ -50,7 +50,6 @@ modify file
 ```bash
 [wsl2]
 kernel=E:\\wsl\\bzImage
-memory=4GB
 ```
 ## shutdown wsl
 ```bash
