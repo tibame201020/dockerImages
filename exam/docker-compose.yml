@@ -16,7 +16,7 @@ services:
     ports:
       - "12058:12058"
     volumes:
-      - ./h2data:/h2data
+      - ./h2data:/app/h2data
     networks:
       front2back:
 networks:
