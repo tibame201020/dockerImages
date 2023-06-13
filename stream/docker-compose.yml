@@ -1,0 +1,25 @@
+version: '3.7'
+#service group
+services:
+  app-frontend:
+    depends_on:
+      - app-backend
+    image: tibame201020/stream-frontend
+    restart: on-failure
+    ports:
+      - 4202:80
+    networks:
+      front2back:
+  app-backend:
+    image: tibame201020/stream-backend
+    restart: on-failure
+    ports:
+      - 18597:18597
+    volumes:
+      - ./h2data:/app/h2data
+    networks:
+      front2back:
+networks:
+  front2back:
+volumes:
+  h2data:
