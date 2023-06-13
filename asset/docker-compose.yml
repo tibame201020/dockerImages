@@ -4,14 +4,14 @@ services:
   app-frontend:
     depends_on:
       - app-backend
-    image: tibame201020/stream-frontend
+    image: tibame201020/asset-frontend
     restart: on-failure
     ports:
       - 4203:80
     networks:
       front2back:
   app-backend:
-    image: tibame201020/stream-backend
+    image: tibame201020/asset-backend
     restart: on-failure
     ports:
       - 9889:9889
