@@ -21,5 +21,4 @@ fi
 echo "username=$docker_weblogic11_user" > boot.properties
 echo "password=$docker_weblogic11_password" >> boot.properties
 
-
-docker run -d --name wls11 --rm -p 6008:7001 -v $(pwd)/boot.properties:/u01/app/oracle/middleware/user_projects/domains/base_domain/servers/AdminServer/security/boot.properties -v $(pwd)/user_projects:/u01/app/oracle/middleware/user_projects -v $(pwd)/home:/home -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=base_domain -e TZ=Asia/Taipei tibame201020/weblogic11
+docker run -d --name wls11 --rm -p 6008:7001 -v $(pwd)/home:/home tibame201020/weblogic11
