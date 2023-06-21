@@ -3,7 +3,7 @@ version: '3.7'
 services:
   wls14:
     container_name: wls14
-    image: tibame201020/weblogic14
+    image: tibame201020/weblogic:14
     ports:
       - "7001:7001"
     volumes:
