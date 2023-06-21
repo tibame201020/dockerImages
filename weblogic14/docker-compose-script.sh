@@ -22,5 +22,4 @@ fi
 echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
-docker pull tibame201020/weblogic14
 docker compose up -d
