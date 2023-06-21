@@ -21,9 +21,6 @@ fi
 echo "username=$docker_weblogic14_user" > domain.properties
 echo "password=$docker_weblogic14_password" >> domain.properties
 
-
-docker pull tibame201020/weblogic14
-
 docker run -d --name wls14 --rm \
              -p 7001:7001 \
              -v $(pwd)/mysql-connector-java-commercial-8.0.14.jar:/u01/oracle/oracle_common/modules/mysql-connector-java-commercial-8.0.14/mysql-connector-java-commercial-8.0.14.jar \
@@ -31,4 +28,4 @@ docker run -d --name wls14 --rm \
              -v $(pwd)/user_projects:/u01/oracle/user_projects \
              -v $(pwd)/home:/home \
              -e ADMINISTRATION_PORT_ENABLED=false -e DOMAIN_NAME=base_domain -e TZ=Asia/Taipei \
-             tibame201020/weblogic14
+             tibame201020/weblogic:14
