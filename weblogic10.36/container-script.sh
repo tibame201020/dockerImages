@@ -6,4 +6,4 @@ if [ ! -d "home" ]; then
   mkdir home
 fi
 
-docker run -d --name wls1036 --rm -p 6008:7001 -v $(pwd)/user_projects:/u01/Oracle/Middleware/user_projects -v $(pwd)/home:/home tibame201020/weblogic:10.3.6
+docker run -d --name wls1036 --rm -p 6008:7001 -v $(pwd)/home:/home tibame201020/weblogic:10.3.6
