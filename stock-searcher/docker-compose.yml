@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  app-frontend:
+    image: tibame201020/stocker-searcher_frontend:1.0.0
+    restart: always
+    ports:
+      - 9218:80
+    networks:
+      - front2back
+
+  app-backend:
+    image: tibame201020/stocker-searcher_backend:1.0.0
+    restart: always
+    environment:
+      - ES_HOST=app-elasticsearch
+      - TZ=Asia/Taipei
+    ports:
+      - 8080:8080
+    networks:
+      - front2back
+      - back2db
+
+  app-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: false
+    networks:
+      - back2db
+networks:
+  front2back:
+  back2db:
+
+volumes:
+  elasticsearch-data:
