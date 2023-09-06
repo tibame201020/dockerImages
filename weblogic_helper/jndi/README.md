@@ -1,10 +1,4 @@
 ## Config the properties to addJndiConfig.sh
-## run with
-```bash
-bash startToAddJndi.sh addJndiConfig.sh
-```
-
-### addJndiConfig.sh
 ```bash
 #!/bin/bash
 wlsVersion=chppse your weblogic 10 or 14
@@ -15,8 +9,10 @@ wlsAcc=weblogic account
 wlsPwd=weblogic password
 weblogichelper=weblogichelper (weblogic_helper container name)
 ```
-
-
+## run with
+```bash
+bash startToAddJndi.sh addJndiConfig.sh
+```
 ### ds.json be like
 ```bash
 [	
