@@ -17,7 +17,7 @@ weblogichelper=weblogichelper (weblogic_helper container name)
 ```
 
 
-### ds.json like below
+### ds.json be like
 ```bash
 [	
 	{
