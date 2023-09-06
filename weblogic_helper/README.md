@@ -1,3 +1,15 @@
+## Use this can help more quickly to deploy application or add jndo to weblogic
+
+#### run with
+```bash
+bash container.sh
+```
+#### deploy application
+https://github.com/tibame201020/dockerImages/tree/main/weblogic_helper/deploy
+#### add jndi
+https://github.com/tibame201020/dockerImages/tree/main/weblogic_helper/jndi
+
+
 ## get docker container ip
 ```bash
 bash get-container-ip.sh ${yourDcokerContainerName}
