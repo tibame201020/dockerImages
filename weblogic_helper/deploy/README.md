@@ -1,10 +1,4 @@
-## Config the properties to deployConfig.sh
-## run with
-```bash
-bash startToDeploy.sh deployConfig.sh
-```
-
-### deployConfig.sh
+### Config the properties to deployConfig.sh
 ```bash
 #!/bin/bash
 wlsVersion=10 (weblogic version 10 or 14)
@@ -15,4 +9,10 @@ hostIp=172.17.0.2:6008(if weblogic run with container use docker ip)
 wlsAcc=weblogic account
 wlsPwd=weblogic password
 weblogichelper=weblogichelper(weblogic_herlper container name)
+```
+
+
+## run with
+```bash
+bash startToDeploy.sh deployConfig.sh
 ```
