@@ -1,4 +1,4 @@
-## Use this can help more quickly to deploy application or add jndo to weblogic
+## Use this can help more quickly to deploy application or add jndi to weblogic
 
 #### run with
 ```bash
