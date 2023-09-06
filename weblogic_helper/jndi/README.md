@@ -4,6 +4,19 @@
 bash startToAddJndi.sh addJndiConfig.sh
 ```
 
+### addJndiConfig.sh
+```bash
+#!/bin/bash
+wlsVersion=chppse your weblogic 10 or 14
+jsonFile=json where config database info file name
+jsonFilePath=json where config database info file path
+hostIp=127.0.0.1:7001 (if weblogic run with docker container use docker ip)
+wlsAcc=weblogic account
+wlsPwd=weblogic password
+weblogichelper=weblogichelper (weblogic_helper container name)
+```
+
+
 ### ds.json like below
 ```bash
 [	
