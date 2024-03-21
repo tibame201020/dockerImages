@@ -21,6 +21,16 @@ services:
     networks:
       - monitoring-network
 
+  loki:
+    image: grafana/loki
+    container_name: loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/loki-config.yaml:/etc/loki/local-config.yaml
+    networks:
+      - monitoring-network
+
 networks:
   monitoring-network:
     driver: bridge
